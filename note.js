@@ -105,34 +105,35 @@ function showLoveQuestion() {
     }
   });
 
-  // Phản ứng khi bấm nút "Có" và "Không"
-  loveNo.addEventListener("click", () => {
-    showModal("Huhu tớ buồn á 😢 Nhưng mà vẫn quý cậu lắm đó nha...");
-  });
+// Nút "Không" phản ứng cảm xúc
+loveNo.addEventListener("click", () => {
+  showModal("Huhu tớ buồn ..😢 Nhưng mà vẫn yêu cậu lắm ó...");
+});
 
-  // 💖 Hiệu ứng né chuột cho nút "Có"
-// 💖 Hiệu ứng né chuột trong khung trình duyệt (viewport) đẹp và giới hạn
-  loveYes.addEventListener("mouseover", () => {
-    const btnWidth = loveYes.offsetWidth;
-    const btnHeight = loveYes.offsetHeight;
-    const padding = 20; // Đệm cho đẹp nè
+// Nút "Có" — hiệu ứng né chuột
+loveYes.addEventListener("mouseover", () => {
+  const btnWidth = loveYes.offsetWidth;
+  const btnHeight = loveYes.offsetHeight;
+  const padding = 20;
 
-    const viewportWidth = window.innerWidth;
-    const viewportHeight = window.innerHeight;
+  const viewportWidth = window.innerWidth;
+  const viewportHeight = window.innerHeight;
 
-    // Vị trí tối đa mà nút vẫn còn thấy được
-    const maxX = viewportWidth - btnWidth - padding;
-    const maxY = viewportHeight - btnHeight - padding;
+  const maxX = viewportWidth - btnWidth - padding;
+  const maxY = viewportHeight - btnHeight - padding;
 
-    // Tọa độ ngẫu nhiên trong vùng an toàn
-    const x = Math.floor(Math.random() * maxX) + padding / 2;
-    const y = Math.floor(Math.random() * maxY) + padding / 2;
+  const x = Math.floor(Math.random() * maxX) + padding / 2;
+  const y = Math.floor(Math.random() * maxY) + padding / 2;
 
-    loveYes.style.position = "fixed"; // đảm bảo nó không trôi khỏi trang
-    loveYes.style.left = `${x}px`;
-    loveYes.style.top = `${y}px`;
-  });
+  loveYes.style.position = "fixed";
+  loveYes.style.left = `${x}px`;
+  loveYes.style.top = `${y}px`;
+});
 
+// 🛡 Nếu nhấn được nút "Có" (có thật luôn hả??)
+loveYes.addEventListener("click", () => {
+  showModal("Oaaa~ Cậu bấm được thật á:)) ...tớ cũng thích cậu nhiều thiệt nhiều luôn á 💖 U-u~");
+});
 
 
 
