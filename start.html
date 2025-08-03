@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kỉ niệm 1 tháng</title>
+    <link rel="stylesheet" href="mouse.css" />
+    <link rel="stylesheet" href="start.css" />
+    <link rel="stylesheet" href="note.css" />
+    <link rel="stylesheet" href="heart.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <canvas id="heart"></canvas>
+
+    <div class="message" id="msg1">Chúc cậu buổi tối hôm nay vui vẻ:)) 🌙</div>
+    <div class="message" id="msg2">Ùm thì... hôm nay là 3 tháng 8 nhỉ... ✨</div>
+    <div class="message" id="msg3">Là kỉ niệm 1 tháng làm người yêu nhau... 💘</div>
+    <div class="message" id="msg4">Được cậu thương... đối với tớ nó là 1 điều gì đó rất... vui và hạnh phúc 🌍</div>
+    <div class="message" id="msg5">Hehe... thật ngại nhỉ... cơ mà... vui lắm đó 🫧</div>
+    <div class="message" id="msg6">Hôm nay cũng... là một ngày tuyệt đẹp... vì có cậu ✿</div>
+
+
+    <!-- Ghi chú kỷ niệm -->
+    <div class="memory-note hidden" id="memoryNote">
+    <h2>🌸 Kỷ niệm nho nhỏ 🌸</h2>
+    <p class="memory-text">
+        Hôm đó là một buổi tối rất đẹp.. yep...
+        Tim tớ lúc đó như vỡ òa luôn á, lúc đó rất ngại, nhưng rồi cũng cất lời yêu cậu. 
+        Từ hôm ấy, thế giới tớ có thêm màu hồng dịu dàng. 
+        Cậu có vui khi ở cùng với tớ không?
+    </p>
+    <div class="buttons">
+        <button class="memory-yes">Có 💖</button>
+        <button class="memory-no">Không 💔</button>
+    </div>
+    </div>
+
+
+        <!-- HTML -->
+    <!-- Phần cuối sau khi "kỷ niệm nho nhỏ" hiện xong -->
+    <div class="love-question hidden" id="loveQuestion">
+    <h2>💕 Cậu có yêu tớ hông đó... <span class="stare">(╥﹏╥)</span></h2>
+    <div class="buttons">
+        <button class="love-yes">Có 💖</button>
+        <button class="love-no">Không 💔</button>
+    </div>
+    </div>
+
+    <div id="loveModal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <p id="modalText">Nội dung thông báo ở đây 💌</p>
+    </div>
+    </div>
+
+
+    <canvas id="canvas"></canvas>
+    <script src="shooting.js"></script>
+    <script src="mouse.js"></script>
+    <script src="note.js"></script>
+    <script src="heart.js"></script>
+
+</body>
+</html>

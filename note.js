@@ -72,18 +72,13 @@ function showGift(gifURL) {
 function showLoveQuestion() {
   loveQuestion.classList.remove("hidden");
   loveQuestion.classList.add("fade-in-memory");
+
+  // 💘 Gọi hiệu ứng tim tại đây khi đến đoạn "cậu có yêu tớ không"
+  if (!window.heartEffectStarted) {
+    window.heartEffectStarted = true;
+    if (typeof init === "function") init(); // gọi hàm init từ heart.js
+  }
 }
-
-
-  // Hiệu ứng nút "Có" né chuột
-  loveYes.addEventListener("mouseover", () => {
-    const x = Math.random() * (window.innerWidth - loveYes.offsetWidth);
-    const y = Math.random() * (window.innerHeight - loveYes.offsetHeight);
-
-    loveYes.style.position = "absolute";
-    loveYes.style.left = `${x}px`;
-    loveYes.style.top = `${y}px`;
-  });
 
   // Modal phần thêm
   const modal = document.getElementById("loveModal");
