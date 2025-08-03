@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  overflow: hidden;
+  height: 100vh;
+  cursor: crosshair;
+}
+
+.star {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f005";
+  text-shadow: 0 0 10px white;
+}

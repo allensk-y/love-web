@@ -1,0 +1,72 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background: #111;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.falling-heart {
+    position: fixed;
+    z-index: -1;
+    top: -20px;
+    color: #ff69b4;
+    animation: animate 5s linear forwards;
+}
+.falling-heart::before {
+    content: '\f004';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    text-shadow: 0 0 5px #ff69b4,
+                 0 0 20px #ff69b4,
+                 0 0 50px #ff69b4;
+    display: inline-block;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    80%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* chừa chỗ bên phải cho icon */
+    border-radius: 999px;
+    border: none;
+    background-color: #1b1b1f;
+    color: white;
+}
+
+.password-container i.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    cursor: pointer;
+}
